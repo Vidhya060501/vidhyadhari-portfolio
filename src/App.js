@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Github, Mail, ArrowRight, Briefcase,
+  Mail, ArrowRight, Briefcase,
   X, Laptop, Globe, Wrench, BookOpen, Monitor,
-  LayoutGrid, Layers, MessageCircle, Lock, Clock, ExternalLink,
+  LayoutGrid, Layers, MessageCircle,
   Sun, Moon
 } from 'lucide-react';
 
@@ -280,8 +280,6 @@ export default function Portfolio() {
   const projCardCls= t('bg-[#1e2535] border-[#2a3347]', 'bg-white border-[#D4D8EE] shadow-sm');
   const moreCls    = t('bg-[#1e2535] border-[#2a3347] hover:border-[#ADB2D4]/60', 'bg-white border-[#D4D8EE] hover:border-[#ADB2D4] shadow-sm');
   const footerCls  = t('bg-[#0d1117] border-t border-[#1e2535]', 'bg-[#D5E5D5] border-t border-[#C7D9DD]');
-  const modalCls   = t('bg-[#1e2535] border-[#2a3347]', 'bg-white border-[#D4D8EE]');
-  const modalInputCls = t('bg-[#0d1117] border-[#2a3347] text-[#ADB2D4]', 'bg-[#EEF0F8] border-[#D4D8EE] text-slate-500');
   const socialCls  = t('border-[#2a3347] text-[#7a82aa] hover:border-[#ADB2D4] hover:text-[#ADB2D4]', 'border-[#e2e5f0] text-slate-500 hover:border-[#ADB2D4] hover:text-[#ADB2D4]');
   const filterInactive = t('bg-[#1e2535] text-[#7a82aa] hover:bg-[#2a3347] hover:text-[#ADB2D4] border border-[#2a3347]', 'bg-white text-slate-600 hover:bg-[#f1f3f9] border border-[#e2e5f0]');
   const menuCls    = t('bg-[#161b27] border-[#2a3347]', 'bg-[#EEF1DA] border-[#D4D8EE] shadow-lg');

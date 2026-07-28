@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0d1120"/>
+  <rect x="48" y="60" width="120" height="56" rx="8" fill="#6366f1" opacity="0.88"/>
+  <text x="108" y="93" text-anchor="middle" fill="white" font-size="14" font-family="sans-serif" font-weight="600">Order</text>
+  <rect x="232" y="60" width="120" height="56" rx="8" fill="#3b82f6" opacity="0.88"/>
+  <text x="292" y="93" text-anchor="middle" fill="white" font-size="14" font-family="sans-serif" font-weight="600">Payment</text>
+  <rect x="48" y="184" width="120" height="56" rx="8" fill="#8b5cf6" opacity="0.88"/>
+  <text x="108" y="217" text-anchor="middle" fill="white" font-size="14" font-family="sans-serif" font-weight="600">Customer</text>
+  <rect x="232" y="184" width="120" height="56" rx="8" fill="#f59e0b" opacity="0.88"/>
+  <text x="292" y="217" text-anchor="middle" fill="white" font-size="14" font-family="sans-serif" font-weight="600">Restaurant</text>
+  <rect x="154" y="132" width="92" height="36" rx="6" fill="#1e293b" stroke="#ADB2D4" stroke-width="1.2" opacity="0.95"/>
+  <text x="200" y="155" text-anchor="middle" fill="#ADB2D4" font-size="12" font-family="sans-serif" font-weight="500">Kafka</text>
+  <line x1="168" y1="132" x2="140" y2="116" stroke="#ADB2D4" stroke-width="1.2" opacity="0.45"/>
+  <line x1="232" y1="132" x2="260" y2="116" stroke="#ADB2D4" stroke-width="1.2" opacity="0.45"/>
+  <line x1="168" y1="168" x2="140" y2="184" stroke="#ADB2D4" stroke-width="1.2" opacity="0.45"/>
+  <line x1="232" y1="168" x2="260" y2="184" stroke="#ADB2D4" stroke-width="1.2" opacity="0.45"/>
+  <text x="200" y="278" text-anchor="middle" fill="#ADB2D4" font-size="13" font-family="sans-serif" opacity="0.55">Saga · Transactional Outbox · idempotent</text>
+</svg>

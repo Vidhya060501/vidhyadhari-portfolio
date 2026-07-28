@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0a1a0a"/>
+  <rect x="0" y="190" width="400" height="110" fill="#0f2210" opacity="0.8"/>
+  <rect x="0" y="188" width="400" height="3" fill="#4ade80" opacity="0.25"/>
+  <rect x="52" y="120" width="7" height="72" fill="#4ade80" opacity="0.75"/>
+  <circle cx="55" cy="112" r="10" fill="#4ade80" opacity="0.9"/>
+  <circle cx="55" cy="112" r="5" fill="#86efac"/>
+  <rect x="162" y="100" width="7" height="92" fill="#4ade80" opacity="0.75"/>
+  <circle cx="165" cy="92" r="10" fill="#4ade80" opacity="0.9"/>
+  <circle cx="165" cy="92" r="5" fill="#86efac"/>
+  <rect x="272" y="130" width="7" height="62" fill="#4ade80" opacity="0.75"/>
+  <circle cx="275" cy="122" r="10" fill="#4ade80" opacity="0.9"/>
+  <circle cx="275" cy="122" r="5" fill="#86efac"/>
+  <rect x="128" y="36" width="144" height="44" rx="10" fill="#1d4ed8" opacity="0.9"/>
+  <text x="200" y="64" text-anchor="middle" fill="white" font-size="14" font-family="sans-serif" font-weight="600">unified platform</text>
+  <line x1="55" y1="102" x2="155" y2="56" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.55"/>
+  <line x1="165" y1="82" x2="185" y2="56" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.55"/>
+  <line x1="275" y1="112" x2="238" y2="56" stroke="#4ade80" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.55"/>
+  <text x="200" y="278" text-anchor="middle" fill="#4ade80" font-size="13" font-family="sans-serif" opacity="0.5">sensor data to unified dashboard</text>
+</svg>

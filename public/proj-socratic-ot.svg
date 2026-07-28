@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0a0d1a"/>
+  <ellipse cx="200" cy="130" rx="58" ry="52" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="200" cy="130" rx="44" ry="38" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
+  <path d="M 168 110 Q 172 98 185 102 Q 188 90 200 92 Q 212 90 215 102 Q 228 98 232 110" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.85"/>
+  <path d="M 165 125 Q 162 138 170 145 Q 175 155 185 152" fill="none" stroke="#a78bfa" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 235 125 Q 238 138 230 145 Q 225 155 215 152" fill="none" stroke="#a78bfa" stroke-width="1.2" opacity="0.7"/>
+  <path d="M 185 152 Q 200 158 215 152" fill="none" stroke="#a78bfa" stroke-width="1.2" opacity="0.7"/>
+  <circle cx="200" cy="130" r="6" fill="#8b5cf6" opacity="0.5"/>
+  <rect x="48" y="68" width="72" height="32" rx="12" fill="#1e1b3a" stroke="#6366f1" stroke-width="1.2" opacity="0.9"/>
+  <text x="84" y="88" text-anchor="middle" fill="#a78bfa" font-size="13" font-family="sans-serif" font-weight="500">What is...?</text>
+  <line x1="118" y1="88" x2="148" y2="110" stroke="#6366f1" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  <rect x="280" y="68" width="72" height="32" rx="12" fill="#1e1b3a" stroke="#6366f1" stroke-width="1.2" opacity="0.9"/>
+  <text x="316" y="88" text-anchor="middle" fill="#a78bfa" font-size="13" font-family="sans-serif" font-weight="500">Why does...?</text>
+  <line x1="280" y1="88" x2="252" y2="110" stroke="#6366f1" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  <rect x="48" y="168" width="80" height="32" rx="12" fill="#1e1b3a" stroke="#6366f1" stroke-width="1.2" opacity="0.9"/>
+  <text x="88" y="188" text-anchor="middle" fill="#a78bfa" font-size="13" font-family="sans-serif" font-weight="500">How would...?</text>
+  <line x1="126" y1="178" x2="152" y2="158" stroke="#6366f1" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  <rect x="272" y="168" width="80" height="32" rx="12" fill="#1e1b3a" stroke="#6366f1" stroke-width="1.2" opacity="0.9"/>
+  <text x="312" y="188" text-anchor="middle" fill="#a78bfa" font-size="13" font-family="sans-serif" font-weight="500">Can you explain...?</text>
+  <line x1="274" y1="178" x2="248" y2="158" stroke="#6366f1" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  <rect x="140" y="220" width="120" height="28" rx="6" fill="#312e81" opacity="0.8"/>
+  <text x="200" y="238" text-anchor="middle" fill="#c4b5fd" font-size="11" font-family="sans-serif">RAGAS · F ≥0.90 · R ≥0.85</text>
+  <text x="200" y="278" text-anchor="middle" fill="#8b5cf6" font-size="13" font-family="sans-serif" opacity="0.55">RAG · LangGraph · Llama 3.1 · ChromaDB</text>
+</svg>

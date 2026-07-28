@@ -1,0 +1,199 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.40in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[normalem]{ulem}
+\usepackage{microtype}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\urlstyle{same}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+\titleformat{\section}
+  {\scshape\fontsize{10.7}{11.2}\selectfont}
+  {}
+  {0pt}
+  {}
+  [\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{5.2pt}{2.7pt}
+\setlist[itemize]{
+  label={\raisebox{0.25ex}{\tiny$\bullet$}},
+  leftmargin=15pt,
+  itemsep=0.9pt,
+  topsep=0.7pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+\begin{document}
+\raggedbottom
+\fontsize{8.7}{9.85}\selectfont
+{\centering
+{\fontsize{20}{21}\selectfont\bfseries Vidhyadhari Bandaru\par}
+\vspace{2pt}
+Buffalo, NY \textbar\
+\href{mailto:vidhyadhari060501@gmail.com}
+{\uline{vidhyadhari060501@gmail.com}} \textbar\
++1 (716) 495-9052 \textbar\
+\href{https://www.linkedin.com/in/vidhyadharibandaru}
+{\uline{linkedin.com/in/vidhyadharibandaru}} \textbar\
+\href{https://github.com/Vidhya060501}
+{\uline{github.com/Vidhya060501}}\par
+\vspace{1.2pt}
+}
+\vspace{1pt}
+
+{\fontsize{8.7}{10}\selectfont
+Backend software engineer with 3 years of production experience in distributed systems and cloud-native services, currently pursuing an MS in Computer Science with an AI and ML specialization (GPA: 4.0). Building at the intersection of reliable backend infrastructure and LLM-based developer tooling, with hands-on experience designing and deploying agentic AI systems on Azure.
+\par}
+\vspace{3pt}
+
+\section*{Education}
+\textbf{University at Buffalo, SUNY}
+\hfill \textbf{Expected Dec 2026}\\
+Master of Science in Computer Science -- AI and Machine Learning Specialization
+\hfill \textbf{GPA: 4.0 / 4.0}\\
+\textit{Relevant Coursework:}
+Advanced Machine Learning, Natural Language Processing, Distributed Systems,
+Database Systems, Operating Systems, Computer Networks
+\vspace{2pt}
+
+\textbf{National Institute of Technology Rourkela, India}
+\hfill \textbf{Jun 2022}\\
+Bachelor of Technology in Engineering
+\hfill \textbf{GPA: 3.8 / 4.0}\\
+\textit{Relevant Coursework:}
+Data Structures, Artificial Intelligence, Database Systems, C Programming
+\vspace{2pt}
+
+\section*{Technical Skills}
+{\fontsize{8.5}{8.95}\selectfont
+\textbf{Languages:} Java, Python, TypeScript, JavaScript, SQL, C\\
+\textbf{AI \& ML:} LangGraph, OpenAI APIs, LLMs, Agentic AI, RAG, AST Parsing, Embeddings\\
+\textbf{Backend \& APIs:} Spring Boot, FastAPI, Node.js, REST APIs, GraphQL, Microservices, Hibernate/JPA, OAuth2, RBAC\\
+\textbf{Cloud \& DevOps:} Azure (Container Apps), AWS (EKS, S3, SQS, SNS, CloudWatch), Docker, Kubernetes, Terraform, Jenkins, Git, CI/CD, Linux\\
+\textbf{Data \& Messaging:} Kafka, Redis, PostgreSQL, MySQL, DynamoDB, Prisma, SQLAlchemy, Query Optimization\\
+\textbf{Testing \& SDLC:} Unit Testing, Integration Testing, Regression Testing, UAT, Production Support, Agile, Code Reviews
+}
+\vspace{2pt}
+
+\section*{Projects}
+\textbf{PR Blast Radius Analyzer}
+\textbar\ \textit{Python, FastAPI, tree-sitter, DynamoDB, LangGraph, OpenAI APIs, Azure}
+\hfill \textbf{Jun 2026}
+\begin{itemize}
+  \item Cut cross-repository PR impact analysis from \textbf{2+ hours to 15 seconds}
+  by building a \textbf{Python/FastAPI agentic tool} with tree-sitter AST parsing,
+  symbol indexing, LangGraph, and OpenAI APIs, deployed on \textbf{Azure Container Apps}.
+  \item Eliminated hallucinated impact claims and enabled compliance auditability
+  by engineering a \textbf{Responsible AI pipeline} with prompt injection detection,
+  AST-grounded output validation, and structured model reasoning audit logs.
+\end{itemize}
+\vspace{2pt}
+
+\textbf{FLOE -- Client-Sponsored Field Data Platform}
+\textbar\ \textit{React, TypeScript, Node.js, Express, PostgreSQL, Prisma, AWS S3, OAuth2}
+\hfill \textbf{Spring 2026}
+\begin{itemize}
+  \item Cut field report access time from \textbf{2 hours to 5 minutes} by leading a
+  4-person team to design and ship a unified field data platform using \textbf{React,
+  TypeScript, Node.js, and PostgreSQL}, consolidating fragmented workflows into a single
+  product now live in \textbf{customer acceptance testing}.
+  \item Defined \textbf{25+ REST API contracts} across account, media, reporting, and
+  alert workflows; enforced two-layer \textbf{RBAC with OAuth2}, API middleware, and
+  route-level permission checks securing multi-tenant Admin, Contributor, and Viewer access.
+\end{itemize}
+\vspace{2pt}
+
+\textbf{Distributed Rate Limiter as a Service}
+\textbar\ \textit{Go, gRPC, Redis, MongoDB, Docker, Kubernetes}
+\hfill \textbf{Jul 2026}
+\begin{itemize}
+  \item Delivered \textbf{sub-2ms p99 rate limit decisions at 10K RPS} by
+  implementing \textbf{Token Bucket from scratch in Go} with atomic
+  \textbf{Redis Lua scripts}, eliminating race conditions and over-limit
+  leakage across 3 horizontally scaled replicas under 500 concurrent clients.
+  \item Validated zero over-limit requests under full load by building a
+  \textbf{k6 stress test harness} across \textbf{gRPC and REST interfaces},
+  with per-tenant rule configs and request audit logs stored in \textbf{MongoDB}.
+\end{itemize}
+
+\textbf{Commerce Transaction Microservices Platform}
+\textbar\ \textit{Java, Spring Boot, Kafka, PostgreSQL, Redis, Docker, Kubernetes}
+\hfill \textbf{May 2026}
+\begin{itemize}
+  \item Built a \textbf{4-service Java/Spring Boot backend} across Order,
+  Payment, Restaurant, and Customer domains using REST APIs, object-oriented
+  domain models, and service-owned \textbf{PostgreSQL} databases.
+  \item Preserved platform consistency across \textbf{10K stress-test transactions}
+  by implementing the \textbf{Saga pattern}, Transactional Outbox pattern,
+  Kafka event workflows, and idempotent consumers.
+\end{itemize}
+\vspace{2pt}
+
+\section*{Professional Experience}
+\textbf{Software Engineer \textbar\ Capgemini Technology Services
+(Client: AXA Insurance)}
+\hfill \textbf{Jan 2024 -- Aug 2025}
+\begin{itemize}
+  \item Reduced latency for a production \textbf{Java} API from
+  \textbf{3s to 20ms} by diagnosing JVM and database bottlenecks with
+  \textbf{Java Flight Recorder}, refactoring \textbf{Hibernate/JPA} access paths,
+  and implementing composite \textbf{PostgreSQL} indexes.
+  \item Improved resilience across a horizontally scaled microservice fleet
+  by replacing synchronous third-party calls with \textbf{multi-threaded Kafka consumers},
+  retry topics, consumer-level backoff, and failure-isolation workflows for burst traffic.
+  \item Prevented service overload by implementing \textbf{Redis}-backed
+  distributed rate limiting with the \textbf{Token Bucket pattern}, Bucket4j,
+  and atomic validation across service instances.
+  \item Maintained \textbf{99.95\% service availability} by containerizing
+  enterprise microservices and implementing \textbf{AWS EKS}, Kubernetes,
+  and Terraform deployment workflows, collaborating with architects and
+  product stakeholders on reliability and compliance requirements.
+  \item Increased \textbf{unit, integration, and regression test coverage}
+  from \textbf{31\% to 74\%} and caught \textbf{20+ pre-release defects}
+  through automated test suites, request validation, release-validation
+  checks, and UAT readiness workflows.
+  \item Reduced manual deployment effort by \textbf{40\%} by building
+  \textbf{Jenkins CI/CD pipelines} with build validation, health checks,
+  rollback configuration, and \textbf{Git}-based change tracking.
+\end{itemize}
+\vspace{2pt}
+
+\textbf{Associate Software Engineer \textbar\
+Capgemini Technology Services (Client: Mars Inc.)}
+\hfill \textbf{Sep 2022 -- Dec 2023}
+\begin{itemize}
+  \item Designed and owned \textbf{Python/FastAPI} ingestion services processing
+  supply chain and trade transaction data across \textbf{180 countries},
+  delivering a \textbf{sub-60 second end-to-end ingestion SLA} with zero
+  duplicate processing through \textbf{Redis}-backed idempotency controls.
+  \item Built and deployed production \textbf{REST APIs} for inventory,
+  transaction, and reporting workflows maintaining \textbf{sub-200ms p99
+  response times} and \textbf{99.9\% uptime SLA}, adopted by business,
+  analytics, and finance teams across the global organization.
+  \item Worked across the full \textbf{SDLC} including requirements refinement,
+  design, development, unit testing, integration testing, regression validation,
+  release coordination, UAT support, deployment, and production support.
+  \item Reduced response times by \textbf{25\%} across high-traffic endpoints
+  by diagnosing and resolving \textbf{N+1 query patterns} through
+  \textbf{SQLAlchemy} eager loading and query consolidation.
+  \item Validated \textbf{5M+ historical supply chain and transaction records}
+  before release by building Databricks \textbf{PySpark} pipelines that
+  surfaced data integrity discrepancies and processing regressions.
+  \item Reduced production incident investigation time by \textbf{30\%}
+  by implementing structured \textbf{JSON} logging and real-time
+  service-health monitoring and alerts in \textbf{AWS CloudWatch}.
+\end{itemize}
+\vspace{2pt}
+
+\section*{Leadership \& Recognition}
+\textbf{Capgemini Best Employee of the Quarter Award}
+\hfill \textbf{Mar 2025}\\
+Recognized for customer satisfaction, delivery ownership, cross-team
+communication, and improvements to production backend reliability.
+\end{document}

@@ -308,7 +308,7 @@ export default function Portfolio() {
     if (m.includes('project') || m.includes('built') || m.includes('portfolio'))
       return "Vidhyadhari has 6 projects: PR Blast Radius Analyzer (AI/ML), Socratic-OT anatomy tutor (AI/ML), FLOE field data platform (Full Stack), Distributed Rate Limiter in Go (Backend), Food Delivery Microservices with Saga pattern (Backend), and Event-Driven Ride-Sharing (Backend). Check them out above! 🚀";
     if (m.includes('experience') || m.includes('job') || m.includes('company') || m.includes('work history'))
-      return "Vidhyadhari has 3+ years of professional experience: Software Engineer at AXA Insurance (Jan 2024-Aug 2025, cut latency from 3s to 20ms) and Associate Software Engineer at Mars Inc. (Sep 2022-Dec 2023, 5M+ supply chain records through PySpark pipelines). 🏢";
+      return "Vidhyadhari has 3+ years of professional experience: Software Engineer at AXA Insurance (Jan 2024-Aug 2025, cut latency from 3.5s to 25ms) and Associate Software Engineer at Mars Inc. (Sep 2022-Dec 2023, 5M+ supply chain records through PySpark pipelines). 🏢";
     if (m.includes('education') || m.includes('degree') || m.includes('university') || m.includes('gpa') || m.includes('school') || m.includes('buffalo'))
       return "Vidhyadhari is pursuing his MS in Computer Science at University at Buffalo, SUNY with a perfect 4.0 GPA, expected Dec 2026. He completed his BTech in Engineering from NIT Rourkela, India with a 3.8 GPA. 🎓";
     if (m.includes('contact') || m.includes('email') || m.includes('reach') || m.includes('hire') || m.includes('connect'))
@@ -554,7 +554,7 @@ export default function Portfolio() {
                 My engineering story didn't start in a classroom. It started with a <strong>dashboard I built during Covid</strong> to help businesses and local governments track recovery data and make faster decisions under pressure. That project showed me something I haven't forgotten since: software, when built with real care, changes real outcomes for real people. I've been chasing that feeling ever since.
               </p>
               <p>
-                That curiosity led to deeper projects, more deliberate learning, and eventually to production-grade systems work at significant scale. I shipped backend infrastructure handling critical financial and operational data for large enterprises, cutting query latency from <strong>3s to 20ms</strong>, architecting <strong>Kafka event pipelines</strong> that held reliably under burst traffic, and validating <strong>5M+ supply chain and transaction records</strong> through PySpark pipelines before they ever reached production. The lesson that stayed with me is that scalability and reliability are not features you add later. They are decisions you make from the very first line of design.
+                That curiosity led to deeper projects, more deliberate learning, and eventually to production-grade systems work at significant scale. I shipped backend infrastructure handling critical financial and operational data for large enterprises, cutting query latency from <strong>3.5s to 25ms</strong>, architecting <strong>Kafka event pipelines</strong> that held reliably under burst traffic, and validating <strong>5M+ supply chain and transaction records</strong> through PySpark pipelines before they ever reached production. The lesson that stayed with me is that scalability and reliability are not features you add later. They are decisions you make from the very first line of design.
               </p>
               <p>
                 I am currently at <strong>University at Buffalo</strong> pursuing my MS in Computer Science with a <strong>4.0 GPA</strong>, specializing in AI and ML. What draws me most right now is where reliable infrastructure meets intelligent systems. My recent work includes a <strong>PR Blast Radius Analyzer</strong> built with LangGraph and OpenAI APIs that reduced cross-repository impact analysis from 2 hours to <strong>under 15 seconds</strong>. I am actively building at the intersection of <strong>agentic AI, developer tooling, and distributed systems</strong>, which is the space I believe will define the next generation of engineering productivity.
@@ -828,7 +828,7 @@ export default function Portfolio() {
 
       <footer className={`relative z-10 py-5 px-4 ${footerCls}`}>
         <div className="max-w-6xl mx-auto text-center">
-          <p className={`text-xs ${txtFaint}`}>&copy; 2025 Vidhyadhari Bandaru</p>
+          <p className={`text-xs ${txtFaint}`}>&copy; 2026 Vidhyadhari Bandaru</p>
         </div>
       </footer>
 

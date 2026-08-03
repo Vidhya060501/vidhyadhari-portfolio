@@ -229,11 +229,12 @@ export default function Portfolio() {
       tags: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Redis", "Jenkins"],
       context: "At AXA Insurance, I owned the backend service sitting between a distributed microservice mesh and millions of policyholder records. The system had latency and reliability problems in production. I was responsible for diagnosing, redesigning, and getting it to hold reliably under load, working directly with architects and product stakeholders to align technical decisions with business reliability requirements. This role changed how I think about system design. I stopped treating reliability as something you add later and started building for it from the first design decision.",
       achievements: [
-        "Owned reliability of a production Java/Spring Boot service, refactoring Hibernate/JPA access paths and implementing composite PostgreSQL indexes to reduce query latency from 3s to 20ms.",
-        "Improved service resilience across a horizontally scaled microservice fleet by replacing synchronous third-party calls with Kafka retry topics, consumer-level backoff, and failure-isolation workflows for burst traffic.",
-        "Prevented service overload by implementing Redis-backed distributed rate limiting with the Token Bucket pattern, Bucket4j, and atomic validation across service instances.",
-        "Increased unit and integration test coverage from 31% to 74% and caught 20+ pre-release defects by expanding automated regression and release-validation suites.",
-        "Reduced manual deployment effort by 40% by building Jenkins CI/CD pipelines with build validation, health checks, rollback configuration, and Git-based change tracking."
+        "[API Performance] Owned reliability of a production Java/Spring Boot service, refactoring Hibernate/JPA access paths and implementing composite PostgreSQL indexes to reduce query latency from 3.5s to 25ms.",
+        "[Reliability & Messaging] Improved service resilience across a horizontally scaled microservice fleet by replacing synchronous third-party calls with Kafka retry topics, consumer-level backoff, and failure-isolation workflows for burst traffic.",
+        "[System Protection] Prevented service overload by implementing Redis-backed distributed rate limiting with the Token Bucket pattern, Bucket4j, and atomic validation across service instances.",
+        "[Availability] Sustained 99.95% platform availability by containerizing Java microservices and managing deployment workflows using AWS EKS, Kubernetes, and Terraform.",
+        "[Quality Engineering] Increased unit and integration test coverage from 31% to 74% and caught 20+ pre-release defects by expanding automated regression and release-validation suites.",
+        "[CI/CD] Reduced manual deployment effort by 40% by building Jenkins CI/CD pipelines with build validation, health checks, rollback configuration, and Git-based change tracking."
       ]
     },
     {
@@ -252,11 +253,12 @@ export default function Portfolio() {
       tags: ["Python", "FastAPI", "PySpark", "Redis", "AWS S3", "SQS", "SNS", "CloudWatch"],
       context: "At Mars Inc., I built data infrastructure supporting supply chain operations and trade transaction processing across global business units. The data covered inventory movement, vendor dues, and settlements feeding procurement and supply chain teams making time-sensitive decisions. I worked closely with operations and business stakeholders to ensure the pipelines we shipped matched what teams on the ground actually depended on. That role built my intuition for catching what breaks at volume before it reaches production.",
       achievements: [
-        "Designed and owned Python ingestion services processing supply chain and trade transaction data across 180 countries, delivering sub-60 second end-to-end ingestion SLA with zero duplicate processing guaranteed through Redis-backed idempotency controls.",
-        "Built and deployed production REST APIs for inventory, transaction, and reporting workflows maintaining sub-200ms p99 response times and 99.9% uptime SLA, adopted by business, analytics, and finance teams across the global organization.",
-        "Reduced response times by 25% across 20+ endpoints by diagnosing and resolving N+1 query patterns through SQLAlchemy eager loading and query consolidation.",
-        "Validated 5M+ historical transaction records before release by building Databricks PySpark pipelines that surfaced data discrepancies before they reached downstream teams.",
-        "Reduced production incident investigation time by 30% by implementing structured JSON logging, service telemetry, and real-time monitoring alerts in AWS CloudWatch."
+        "[Global Ingestion] Designed and owned Python ingestion services processing supply chain and trade transaction data across 180 countries, delivering sub-60 second end-to-end ingestion SLA with zero duplicate processing guaranteed through Redis-backed idempotency controls.",
+        "[API Reliability] Built and deployed production REST APIs for inventory, transaction, and reporting workflows maintaining sub-200ms p99 response times and 99.9% uptime SLA, adopted by business, analytics, and finance teams across the global organization.",
+        "[SDLC] Executed full SDLC workflows across Agile sprints, leading API design, integration testing, release coordination, UAT support, and production incident debugging.",
+        "[Query Optimization] Reduced response times by 25% across 20+ endpoints by diagnosing and resolving N+1 query patterns through SQLAlchemy eager loading and query consolidation.",
+        "[Data Validation] Validated 5M+ historical transaction records before release by building Databricks PySpark pipelines that surfaced data discrepancies before they reached downstream teams.",
+        "[Observability] Reduced production incident investigation time by 30% by implementing structured JSON logging, service telemetry, and real-time monitoring alerts in AWS CloudWatch."
       ]
     }
   ];
@@ -487,6 +489,10 @@ export default function Portfolio() {
                 className={`flex items-center gap-2 border px-5 py-2.5 rounded-lg transition-all text-sm font-medium ${t('border-[#2a3347] text-[#ADB2D4] hover:border-[#ADB2D4] hover:text-white','border-[#ADB2D4] text-slate-700 hover:border-[#6B72A8] hover:text-slate-900')}`}>
                 View My Work
               </a>
+              <a href="/Vidhyadhari_Bandaru_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-lg transition-all text-sm font-semibold shadow-lg" style={{background: accent, color: isDark?'#0d1117':'white'}}>
+                Download Resume
+              </a>
             </div>
             <div className="flex justify-center md:justify-start gap-4">
               {[
@@ -679,7 +685,11 @@ export default function Portfolio() {
                       {exp.achievements.map((a, j) => (
                         <div key={j} className={`flex items-start gap-2.5 text-sm leading-relaxed ${txtMuted}`}>
                           <ArrowRight className='w-3.5 h-3.5 flex-shrink-0 mt-1 transition-all duration-300 group-hover:scale-110' style={{color: accent}}/>
-                          <span className={`transition-colors duration-300 ${t('group-hover:text-gray-200','group-hover:text-slate-900')} ${t('text-gray-400','text-slate-700')}`}>{a}</span>
+                          <span className={`transition-colors duration-300 ${t('group-hover:text-gray-200','group-hover:text-slate-900')} ${t('text-gray-400','text-slate-700')}`}>
+                            {a.startsWith('[') ? (
+                              <><strong style={{color: accent}}>{a.slice(0, a.indexOf(']') + 1)}</strong>{a.slice(a.indexOf(']') + 1)}</>
+                            ) : a}
+                          </span>
                         </div>
                       ))}
                     </div>

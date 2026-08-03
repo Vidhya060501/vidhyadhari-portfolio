@@ -487,7 +487,11 @@ export default function Portfolio() {
             <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
               <a href="#projects"
                 className={`flex items-center gap-2 border px-5 py-2.5 rounded-lg transition-all text-sm font-medium ${t('border-[#2a3347] text-[#ADB2D4] hover:border-[#ADB2D4] hover:text-white','border-[#ADB2D4] text-slate-700 hover:border-[#6B72A8] hover:text-slate-900')}`}>
-                View My Work
+                View Projects
+              </a>
+              <a href="#experience"
+                className={`flex items-center gap-2 border px-5 py-2.5 rounded-lg transition-all text-sm font-medium ${t('border-[#2a3347] text-[#ADB2D4] hover:border-[#ADB2D4] hover:text-white','border-[#ADB2D4] text-slate-700 hover:border-[#6B72A8] hover:text-slate-900')}`}>
+                Work Experience
               </a>
               <a href="/Vidhyadhari_Bandaru_Resume.pdf" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-lg transition-all text-sm font-semibold shadow-lg" style={{background: accent, color: isDark?'#0d1117':'white'}}>

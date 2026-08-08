@@ -218,9 +218,8 @@ export default function Portfolio() {
       company: "Capgemini Technology Services",
       logoDotBg: "#0070AD",
       logoDotContent: (
-        <div className="flex flex-col items-center justify-center w-full h-full p-1">
-          <span style={{fontSize:'8px', fontWeight:'800', color:'white', letterSpacing:'0px', lineHeight:1, textAlign:'center'}}>CAP</span>
-          <span style={{fontSize:'7px', fontWeight:'700', color:'#c8d8ff', letterSpacing:'0px', lineHeight:1.2, textAlign:'center'}}>GEMINI</span>
+        <div className="flex items-center justify-center w-full h-full">
+          <span style={{fontSize:'17px', fontWeight:'900', color:'white', letterSpacing:'-1px'}}>CG</span>
         </div>
       ),
       role: "Software Engineer",
@@ -242,9 +241,8 @@ export default function Portfolio() {
       company: "Capgemini Technology Services",
       logoDotBg: "#0070AD",
       logoDotContent: (
-        <div className="flex flex-col items-center justify-center w-full h-full p-1">
-          <span style={{fontSize:'8px', fontWeight:'800', color:'white', letterSpacing:'0px', lineHeight:1, textAlign:'center'}}>CAP</span>
-          <span style={{fontSize:'7px', fontWeight:'700', color:'#c8d8ff', letterSpacing:'0px', lineHeight:1.2, textAlign:'center'}}>GEMINI</span>
+        <div className="flex items-center justify-center w-full h-full">
+          <span style={{fontSize:'17px', fontWeight:'900', color:'white', letterSpacing:'-1px'}}>CG</span>
         </div>
       ),
       role: "Associate Software Engineer",

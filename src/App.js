@@ -712,10 +712,16 @@ export default function Portfolio() {
 
                     <button
                       onClick={() => setExpandedExp(prev => ({...prev, [i]: !prev[i]}))}
-                      className="flex items-center gap-1.5 text-xs font-semibold mb-3 transition-colors duration-200"
-                      style={{color: accent}}>
-                      <ArrowRight className={`w-3 h-3 transition-transform duration-200 ${expandedExp[i] ? 'rotate-90' : ''}`}/>
-                      {expandedExp[i] ? 'Hide details' : 'Show details'}
+                      className="flex items-center gap-2 text-xs font-semibold mb-4 px-4 py-2 rounded-lg border transition-all duration-200"
+                      style={{
+                        color: accent,
+                        borderColor: accent,
+                        background: expandedExp[i] ? `${accent}18` : 'transparent'
+                      }}
+                      onMouseEnter={e => e.currentTarget.style.background = `${accent}25`}
+                      onMouseLeave={e => e.currentTarget.style.background = expandedExp[i] ? `${accent}18` : 'transparent'}>
+                      <ArrowRight className={`w-3.5 h-3.5 transition-transform duration-200 ${expandedExp[i] ? 'rotate-90' : ''}`}/>
+                      {expandedExp[i] ? 'Hide Details' : 'Show All Details'}
                     </button>
 
                     {expandedExp[i] && (

@@ -79,6 +79,7 @@ export default function Portfolio() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [typewriterText, setTypewriterText] = useState('');
   const [filterCategory, setFilterCategory] = useState('All');
+  const [expandedExp, setExpandedExp] = useState({});
 
   const titles = ["Software Engineer", "Backend Platform Engineer", "Distributed Systems · Cloud Native · AI Tooling", "Reliability by Design. Owned in Production."];
   const [titleIndex, setTitleIndex] = useState(0);
@@ -227,7 +228,7 @@ export default function Portfolio() {
       period: "Jan 2024 – Aug 2025",
       location: "India",
       tags: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Redis", "Jenkins"],
-      context: "At AXA Insurance, I owned the backend service sitting between a distributed microservice mesh and millions of policyholder records. The system had latency and reliability problems in production. I was responsible for diagnosing, redesigning, and getting it to hold reliably under load, working directly with architects and product stakeholders to align technical decisions with business reliability requirements. This role changed how I think about system design. I stopped treating reliability as something you add later and started building for it from the first design decision.",
+      summary: "Reduced production API latency 140x (3,500ms to 25ms) on a Java/Spring Boot service handling millions of insurance policyholders, while sustaining 99.95% platform availability on AWS EKS with Kubernetes and Terraform.",
       achievements: [
         "[API Performance] Owned reliability of a production Java/Spring Boot service, refactoring Hibernate/JPA access paths and implementing composite PostgreSQL indexes to reduce query latency from 3.5s to 25ms.",
         "[Reliability & Messaging] Improved service resilience across a horizontally scaled microservice fleet by replacing synchronous third-party calls with Kafka retry topics, consumer-level backoff, and failure-isolation workflows for burst traffic.",
@@ -251,7 +252,7 @@ export default function Portfolio() {
       period: "Sep 2022 – Dec 2023",
       location: "India",
       tags: ["Python", "FastAPI", "PySpark", "Redis", "AWS S3", "SQS", "SNS", "CloudWatch"],
-      context: "At Mars Inc., I built data infrastructure supporting supply chain operations and trade transaction processing across global business units. The data covered inventory movement, vendor dues, and settlements feeding procurement and supply chain teams making time-sensitive decisions. I worked closely with operations and business stakeholders to ensure the pipelines we shipped matched what teams on the ground actually depended on. That role built my intuition for catching what breaks at volume before it reaches production.",
+      summary: "Built Python/FastAPI ingestion pipelines processing supply chain data across 180 countries with sub-60s SLA, and REST APIs maintaining sub-200ms p99 with 99.9% uptime adopted across global analytics and business teams.",
       achievements: [
         "[Global Ingestion] Designed and owned Python ingestion services processing supply chain and trade transaction data across 180 countries, delivering sub-60 second end-to-end ingestion SLA with zero duplicate processing guaranteed through Redis-backed idempotency controls.",
         "[API Reliability] Built and deployed production REST APIs for inventory, transaction, and reporting workflows maintaining sub-200ms p99 response times and 99.9% uptime SLA, adopted by business, analytics, and finance teams across the global organization.",
@@ -705,22 +706,32 @@ export default function Portfolio() {
 
                     <div className={`border-t mb-3 ${t('border-gray-800','border-slate-100')}`}/>
 
-                    {exp.context && (
-                      <p className={`text-sm leading-relaxed mb-4 italic ${t('text-gray-400','text-slate-600')}`}>{exp.context}</p>
+                    {exp.summary && (
+                      <p className={`text-sm leading-relaxed mb-4 ${t('text-gray-300','text-slate-700')}`}>{exp.summary}</p>
                     )}
 
-                    <div className="space-y-2.5 mb-4">
-                      {exp.achievements.map((a, j) => (
-                        <div key={j} className={`flex items-start gap-2.5 text-sm leading-relaxed ${txtMuted}`}>
-                          <ArrowRight className='w-3.5 h-3.5 flex-shrink-0 mt-1 transition-all duration-300 group-hover:scale-110' style={{color: accent}}/>
-                          <span className={`transition-colors duration-300 ${t('group-hover:text-gray-200','group-hover:text-slate-900')} ${t('text-gray-400','text-slate-700')}`}>
-                            {a.startsWith('[') ? (
-                              <><strong style={{color: accent}}>{a.slice(0, a.indexOf(']') + 1)}</strong>{a.slice(a.indexOf(']') + 1)}</>
-                            ) : a}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                    <button
+                      onClick={() => setExpandedExp(prev => ({...prev, [i]: !prev[i]}))}
+                      className="flex items-center gap-1.5 text-xs font-semibold mb-3 transition-colors duration-200"
+                      style={{color: accent}}>
+                      <ArrowRight className={`w-3 h-3 transition-transform duration-200 ${expandedExp[i] ? 'rotate-90' : ''}`}/>
+                      {expandedExp[i] ? 'Hide details' : 'Show details'}
+                    </button>
+
+                    {expandedExp[i] && (
+                      <div className="space-y-2.5 mb-4">
+                        {exp.achievements.map((a, j) => (
+                          <div key={j} className={`flex items-start gap-2.5 text-sm leading-relaxed ${txtMuted}`}>
+                            <ArrowRight className='w-3.5 h-3.5 flex-shrink-0 mt-1' style={{color: accent}}/>
+                            <span className={`${t('text-gray-400','text-slate-700')}`}>
+                              {a.startsWith('[') ? (
+                                <><strong style={{color: accent}}>{a.slice(0, a.indexOf(']') + 1)}</strong>{a.slice(a.indexOf(']') + 1)}</>
+                              ) : a}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
 
                     {exp.tags && (
                       <div className="flex flex-wrap gap-2">

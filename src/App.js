@@ -80,7 +80,7 @@ export default function Portfolio() {
   const [typewriterText, setTypewriterText] = useState('');
   const [filterCategory, setFilterCategory] = useState('All');
 
-  const titles = ["Backend Platform Engineer", "Building Systems Engineers Rely On", "Distributed Systems · Cloud Native · AI Tooling", "Reliability by Design. Owned in Production."];
+  const titles = ["Software Engineer", "Backend Platform Engineer", "Distributed Systems · Cloud Native · AI Tooling", "Reliability by Design. Owned in Production."];
   const [titleIndex, setTitleIndex] = useState(0);
 
   const t = (dark, light) => isDark ? dark : light;
@@ -540,6 +540,30 @@ export default function Portfolio() {
         </div>
       </section>
 
+
+      {/* IMPACT STRIP */}
+      <section className={`relative z-10 py-12 px-4 sm:px-6 lg:px-8`} style={{background: isDark?'#0d1117':'#f8f9fc'}}>
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { metric: "3,500ms → 25ms", label: "p95 latency on a Java/Spring Boot insurance portal", icon: "⚡" },
+            { metric: "99.95%", label: "Platform uptime on AWS EKS, Kubernetes, and Terraform", icon: "🛡️" },
+            { metric: "10K+", label: "Concurrent users on a Kafka-backed disaster-resilient ingestion layer", icon: "📈" },
+            { metric: "2 hrs → 15 sec", label: "Cross-repository PR impact analysis with LangGraph and tree-sitter AST", icon: "🤖" },
+          ].map((item, i) => (
+            <div key={i} className={`rounded-xl p-5 border flex flex-col gap-2 transition-all duration-300`}
+              style={{
+                background: isDark ? 'rgba(173,178,212,0.06)' : 'white',
+                borderColor: isDark ? 'rgba(173,178,212,0.2)' : 'rgba(173,178,212,0.4)'
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = '#ADB2D4'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = isDark ? 'rgba(173,178,212,0.2)' : 'rgba(173,178,212,0.4)'; e.currentTarget.style.transform = ''; }}>
+              <span className="text-2xl">{item.icon}</span>
+              <p className="text-xl font-bold" style={{color: accent}}>{item.metric}</p>
+              <p className={`text-xs leading-relaxed ${t('text-gray-400', 'text-slate-600')}`}>{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* ABOUT */}
       <section id="about" className={`relative z-10 scroll-animate`} style={{background: isDark?'#161b27':'white'}}>

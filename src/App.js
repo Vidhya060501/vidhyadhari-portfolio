@@ -265,7 +265,7 @@ export default function Portfolio() {
   ];
 
   const education = [
-    { school: "University at Buffalo, SUNY", degree: "Master of Science in Computer Science", location: "Buffalo, NY", period: "Jan 2025 – Dec 2026 (Expected)", gpa: "4.0/4.0", courses: ["Distributed Systems", "Operating Systems", "Algorithm Design", "Machine Learning", "Natural Language Processing", "Deep Learning", "Database Systems"], current: true },
+    { school: "University at Buffalo, SUNY", degree: "Master of Science in Computer Science", location: "Buffalo, NY", period: "Aug 2025 – Dec 2026 (Expected)", gpa: "4.0/4.0", courses: ["Distributed Systems", "Operating Systems", "Algorithm Design", "Machine Learning", "Natural Language Processing", "Deep Learning", "Database Systems"], current: true },
     { school: "NIT Rourkela, India", degree: "Bachelor of Technology in Engineering", location: "India", period: "Jun 2018 – Jun 2022", gpa: "3.8/4.0", courses: ["Data Structures", "Operating Systems", "Computer Networks", "Algorithm Design"], current: false }
   ];
 
@@ -483,7 +483,7 @@ export default function Portfolio() {
               <span className={txt}>{typewriterText}</span><span className="animate-pulse" style={{color: accent}}>|</span>
             </p>
             <p className={`text-sm sm:text-base leading-relaxed mb-8 max-w-md mx-auto md:mx-0 ${t('text-gray-400','text-slate-900')}`}>
-              I am a backend engineer drawn to problems that only reveal themselves under real load. The kind where the architecture either holds or it doesn't, and there is no middle ground. Three years in production across financial services and manufacturing, now at UB (MS CS, 4.0 GPA) and building at the intersection of distributed systems and AI tooling.
+              I am a software engineer drawn to problems that only reveal themselves under real load. The kind where the architecture either holds or it doesn't, and there is no middle ground. Three years in production across financial services and manufacturing, now at University at Buffalo pursuing MS in Computer Science (4.0 GPA, graduating Dec 2026) and building at the intersection of distributed systems and AI tooling.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
               <a href="#projects"

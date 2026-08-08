@@ -228,6 +228,7 @@ export default function Portfolio() {
       location: "India",
       tags: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Redis", "Jenkins"],
       summary: "Reduced production API latency 140x (3,500ms to 25ms) on a Java/Spring Boot service handling millions of insurance policyholders, while sustaining 99.95% platform availability on AWS EKS with Kubernetes and Terraform.",
+      principle: "Reliability is not a feature you add later. It is a decision you make from the first line of design.",
       achievements: [
         "[API Performance] Owned reliability of a production Java/Spring Boot service, refactoring Hibernate/JPA access paths and implementing composite PostgreSQL indexes to reduce query latency from 3.5s to 25ms.",
         "[Reliability & Messaging] Improved service resilience across a horizontally scaled microservice fleet by replacing synchronous third-party calls with Kafka retry topics, consumer-level backoff, and failure-isolation workflows for burst traffic.",
@@ -251,6 +252,7 @@ export default function Portfolio() {
       location: "India",
       tags: ["Python", "FastAPI", "PySpark", "Redis", "AWS S3", "SQS", "SNS", "CloudWatch"],
       summary: "Built Python/FastAPI ingestion pipelines processing supply chain data across 180 countries with sub-60s SLA, and REST APIs maintaining sub-200ms p99 with 99.9% uptime adopted across global analytics and business teams.",
+      principle: "At global scale, the most valuable engineering skill is catching what breaks at volume before it ever reaches production.",
       achievements: [
         "[Global Ingestion] Designed and owned Python ingestion services processing supply chain and trade transaction data across 180 countries, delivering sub-60 second end-to-end ingestion SLA with zero duplicate processing guaranteed through Redis-backed idempotency controls.",
         "[API Reliability] Built and deployed production REST APIs for inventory, transaction, and reporting workflows maintaining sub-200ms p99 response times and 99.9% uptime SLA, adopted by business, analytics, and finance teams across the global organization.",
@@ -705,7 +707,13 @@ export default function Portfolio() {
                     <div className={`border-t mb-3 ${t('border-gray-800','border-slate-100')}`}/>
 
                     {exp.summary && (
-                      <p className={`text-sm leading-relaxed mb-4 ${t('text-gray-300','text-slate-700')}`}>{exp.summary}</p>
+                      <p className={`text-sm leading-relaxed mb-3 ${t('text-gray-300','text-slate-700')}`}>{exp.summary}</p>
+                    )}
+                    {exp.principle && (
+                      <p className={`text-xs italic leading-relaxed mb-4 pl-3 ${t('text-gray-500','text-slate-500')}`}
+                        style={{borderLeft: `2px solid ${accent}66`}}>
+                        "{exp.principle}"
+                      </p>
                     )}
 
                     <button

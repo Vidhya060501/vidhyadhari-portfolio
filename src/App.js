@@ -479,9 +479,21 @@ export default function Portfolio() {
           <div className="order-2 md:order-1 text-center md:text-left">
             <p className={`text-base mb-2 ${txtMuted}`}>Hi, I'm</p>
             <h1 className={`text-5xl sm:text-6xl font-bold mb-3 leading-tight ${txt}`}>Vidhyadhari Bandaru</h1>
-            <p className="text-xl font-medium mb-6 h-8" style={{color: accent}}>
+            <p className="text-xl font-medium mb-4 h-8" style={{color: accent}}>
               <span className={txt}>{typewriterText}</span><span className="animate-pulse" style={{color: accent}}>|</span>
             </p>
+            {/* Availability + company badges */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-5">
+              <span className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border"
+                style={{color: '#4ade80', borderColor: '#4ade8066', background: 'rgba(74,222,128,0.08)'}}>
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block"/>
+                Open to full-time · Available May 2027
+              </span>
+              <span className={`text-xs font-medium px-3 py-1.5 rounded-full border ${t('border-[#2a3347] text-gray-400','border-slate-300 text-slate-500')}`}
+                style={{background: isDark ? 'rgba(173,178,212,0.06)' : 'rgba(0,0,0,0.03)'}}>
+                Previously: AXA Insurance · Mars Inc.
+              </span>
+            </div>
             <p className={`text-sm sm:text-base leading-relaxed mb-8 max-w-md mx-auto md:mx-0 ${t('text-gray-400','text-slate-900')}`}>
               I am a software engineer drawn to problems that only reveal themselves under real load. The kind where the architecture either holds or it doesn't, and there is no middle ground. Three years in production across financial services and manufacturing, now at University at Buffalo pursuing MS in Computer Science (4.0 GPA, graduating Dec 2026) and building at the intersection of distributed systems and AI tooling.
             </p>

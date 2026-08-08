@@ -483,15 +483,15 @@ export default function Portfolio() {
               <span className={txt}>{typewriterText}</span><span className="animate-pulse" style={{color: accent}}>|</span>
             </p>
             {/* Availability + company badges */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-5">
-              <span className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border"
-                style={{color: '#4ade80', borderColor: '#4ade8066', background: 'rgba(74,222,128,0.08)'}}>
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block"/>
-                Open to full-time · Available May 2027
-              </span>
-              <span className={`text-xs font-medium px-3 py-1.5 rounded-full border ${t('border-[#2a3347] text-gray-400','border-slate-300 text-slate-500')}`}
-                style={{background: isDark ? 'rgba(173,178,212,0.06)' : 'rgba(0,0,0,0.03)'}}>
+            <div className="flex flex-col items-center md:items-start gap-2 mb-5">
+              <span className={`text-xs font-semibold px-3 py-1.5 rounded-full border`}
+                style={{color: accent, borderColor: `${accent}66`, background: `${accent}10`}}>
                 Previously: AXA Insurance · Mars Inc.
+              </span>
+              <span className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border`}
+                style={{color: accent, borderColor: `${accent}66`, background: `${accent}10`}}>
+                <span className="w-1.5 h-1.5 rounded-full animate-pulse inline-block" style={{background: accent}}/>
+                Open to full-time · Available Dec 2026
               </span>
             </div>
             <p className={`text-sm sm:text-base leading-relaxed mb-8 max-w-md mx-auto md:mx-0 ${t('text-gray-400','text-slate-900')}`}>
